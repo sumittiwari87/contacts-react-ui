@@ -44,14 +44,15 @@ class ListContacts extends Component{
     }
     render() {
         // noinspection JSAnnotator
-        //const {contacts, onDeletContacts}
+        const {contacts, onDeleteContact} = this.props
+        const {query} = this.state
 
         let showingContacts
-        if(this.state.query){
+        if(query){
             const match = new RegExp(escapeRedExp(this.state.query),'i')
-            showingContacts = this.props.contacts.filter((contact)=>match.test(contact.name))
+            showingContacts = contacts.filter((contact)=>match.test(contact.name))
         }else{
-            showingContacts =  this.props.contacts
+            showingContacts =  contacts
         }
 
         showingContacts.sort(sortBy('name'))
@@ -75,7 +76,7 @@ class ListContacts extends Component{
                                 <p>{contact.name}</p>
                                 <p>{contact.email}</p>
                             </div>
-                            <button onClick={()=>this.props.onDeleteContact(contact)} className="contact-remove">Remove</button>
+                            <button onClick={()=>onDeleteContact(contact)} className="contact-remove">Remove</button>
                         </li>
                     ))}
                 </ol>
