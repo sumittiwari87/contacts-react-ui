@@ -52,4 +52,4 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## Something Missing?
 
-If you have ideas for more “How To” recipes that should be on this page, [let us know](http://www.sumitkumartiwari.com) or [Write a suggestion or create a issues](https://github.com/sumittiwari87/contacts-react-ui/issues)
+If you have ideas for more “How To” recipes that should be on this page, [let me know](http://www.sumitkumartiwari.com) or [Write a suggestion or create a issues](https://github.com/sumittiwari87/contacts-react-ui/issues)
