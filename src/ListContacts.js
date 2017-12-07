@@ -1,32 +1,9 @@
 import React,{Component} from 'react'
 import PropTypes from 'prop-types'
+import {Link} from 'react-router-dom'
 import escapeRedExp from 'escape-string-regexp'
 import sortBy from 'sort-by'
-//Stateless functional component and do not need to import {Component} from 'react'
 
-/*function ListContacts(props){
-    return (
-        <ol className="contact-list">
-            {props.contacts.map((contact) => (
-                <li key={contact.id} className="contact-list-item">
-                    <div className="contact-avatar" style={{
-                        backgroundImage:`url(${contact.avatarURL})`
-                    }}/>
-                    <div className="contact-details">
-                        <p>{contact.name}</p>
-                        <p>{contact.email}</p>
-                    </div>
-                    <button className="contact-remove" onClick={()=>props.onDeleteContact(contact)}>Remove</button>
-                </li>
-            ))}
-        </ol>
-    )
-}
-
-ListContacts.propTypes={
-    contacts:PropTypes.array.isRequired,
-    onDeleteContact:PropTypes.func.isRequired
-}*/
 
 
 class ListContacts extends Component{
@@ -69,6 +46,9 @@ class ListContacts extends Component{
                             value={this.state.query}
                             onChange={(event)=> this.updateQuery(event.target.value)}
                     />
+                    <Link to="/create"
+                        className="add-contact"
+                        > Add Contact</Link>
                 </div>
                 {showingContacts.length!== contacts.length && (
                     <div className="showing-contacts">
